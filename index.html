@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamax:Virtual Physics Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experiments">Experiments</a></li>
+        </ul>
+        <div><img src="assets/icons/DMaxLogo.png" alt="Logo"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="crack-line crack-1"></div>
+        <div class="hero-content">
+            <h1>Dynamax</h1>
+            <h1>Virtual Physics Lab</h1>
+            <p>
+                <em>Explore the fundamental laws of physics through interactive simulations. 
+                Witness the elegance of motion, energy, and momentum in a digital environment 
+                where theory meets visual reality. Experience physics like never before.</em>
+            </p>
+            <a href="#experiments" class="cta-button">Begin Exploration</a>
+        </div>
+    </section>
+
+    <!-- Experiments Section -->
+    <section class="experiments-section" id="experiments">
+        <div class="crack-line crack-2"></div>
+        <h2 class="section-title">Available Experiments</h2>
+        <div class="experiments-grid" id="experimentsGrid">
+            <div class="experiment-card" onclick="location.href='#double-pendulum'">
+                <div class="experiment-icon">⚛️</div>
+                <div class="experiment-name">Double Pendulum</div>
+            </div>
+            <div class="experiment-card" onclick="location.href='#spring-mass'">
+                <div class="experiment-icon">〰️</div>
+                <div class="experiment-name">Spring-Mass System</div>
+            </div>
+            <div class="experiment-card" onclick="location.href='#collision'">
+                <div class="experiment-icon">💥</div>
+                <div class="experiment-name">Momentum Conservation in Collision</div>
+            </div>
+            <div class="experiment-card" onclick="location.href='/projectile.html'">
+                <div class="experiment-icon">🎯</div>
+                <div class="experiment-name">Projectile Motion</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
