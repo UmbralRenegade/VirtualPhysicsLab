@@ -11,7 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Navbar */
 nav {
     position: fixed;
     top: 0;
@@ -70,7 +69,6 @@ nav {
     letter-spacing: 2px;
 }
 
-/* Main Layout */
 .experiment-container {
     display: grid;
     grid-template-columns: 400px 1fr;
@@ -79,7 +77,6 @@ nav {
     gap: 0;
 }
 
-/* Controls Panel */
 .controls-panel {
     background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
     border-right: 2px solid rgba(218, 165, 32, 0.3);
@@ -105,7 +102,6 @@ nav {
     border-bottom: 1px solid rgba(218, 165, 32, 0.2);
 }
 
-/* Control Groups */
 .control-group {
     margin-bottom: 2rem;
 }
@@ -161,15 +157,13 @@ nav {
     text-align: center;
 }
 
-/* Buttons */
 .button-group {
     display: flex;
     gap: 1rem;
     margin: 2rem 0;
 }
 
-.primary-btn,
-.secondary-btn {
+.primary-btn, .secondary-btn {
     flex: 1;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
@@ -183,8 +177,7 @@ nav {
     overflow: hidden;
 }
 
-.primary-btn::before,
-.secondary-btn::before {
+.primary-btn::before, .secondary-btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -195,23 +188,19 @@ nav {
     transition: left 0.3s;
 }
 
-.primary-btn:hover::before,
-.secondary-btn:hover::before {
+.primary-btn:hover::before, .secondary-btn:hover::before {
     left: 0;
 }
 
-.primary-btn:hover,
-.secondary-btn:hover {
+.primary-btn:hover, .secondary-btn:hover {
     background: rgba(218, 165, 32, 0.1);
     box-shadow: 0 0 20px rgba(218, 165, 32, 0.4);
 }
 
-.primary-btn:active,
-.secondary-btn:active {
+.primary-btn:active, .secondary-btn:active {
     transform: scale(0.98);
 }
 
-/* Info Panel */
 .info-panel {
     background: rgba(218, 165, 32, 0.05);
     border: 1px solid rgba(218, 165, 32, 0.2);
@@ -249,7 +238,6 @@ nav {
     font-size: 0.95rem;
 }
 
-/* Toggle Group */
 .toggle-group {
     margin-top: 2rem;
     padding-top: 2rem;
@@ -277,7 +265,6 @@ nav {
     accent-color: #daa520;
 }
 
-/* Canvas Panel */
 .canvas-panel {
     background: #0a0a0a;
     display: flex;
@@ -304,7 +291,6 @@ nav {
     text-align: center;
 }
 
-/* Scrollbar Styling */
 .controls-panel::-webkit-scrollbar {
     width: 8px;
 }
@@ -322,7 +308,6 @@ nav {
     background: rgba(218, 165, 32, 0.5);
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .experiment-container {
         grid-template-columns: 1fr;
@@ -353,8 +338,7 @@ nav {
         flex-direction: column;
     }
 
-    .primary-btn,
-    .secondary-btn {
+    .primary-btn, .secondary-btn {
         width: 100%;
     }
 }
