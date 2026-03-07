@@ -11,7 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Navbar */
 nav {
     position: fixed;
     top: 0;
@@ -70,7 +69,6 @@ nav {
     letter-spacing: 2px;
 }
 
-/* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -153,7 +151,6 @@ nav {
     box-shadow: 0 0 20px rgba(218, 165, 32, 0.4);
 }
 
-/* Experiments Section */
 .experiments-section {
     min-height: 100vh;
     padding: 6rem 4rem;
@@ -249,7 +246,6 @@ nav {
     z-index: 1;
 }
 
-/* Decorative elements */
 .crack-line {
     position: absolute;
     height: 2px;
@@ -271,7 +267,6 @@ nav {
     transform: rotate(5deg);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     nav {
         padding: 1rem 2rem;
@@ -293,4 +288,5 @@ nav {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
 }
