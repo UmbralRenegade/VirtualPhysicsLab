@@ -18,7 +18,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 4rem;
+    padding: 1rem 4rem;
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
@@ -60,13 +60,16 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    background: linear-gradient(135deg, #daa520, #ffd700);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: 2px;
+    height: 35px;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
 .experiment-container {
