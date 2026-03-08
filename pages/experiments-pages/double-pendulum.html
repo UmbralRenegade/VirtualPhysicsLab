@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Pendulum - Virtual Physics Lab</title>
+    <link rel="stylesheet" href="../../css/double-pendulum.css">
+</head>
+<body>
+    
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#experiments">Experiments</a></li>
+        </ul>
+        <div class="logo"><img src="../../assets/icons/DMaxLogo.png" alt="logo"></div>
+    </nav>
+
+    <main class="experiment-container">
+        <aside class="controls-panel">
+            <h2 class="panel-title">⚛️ Double Pendulum</h2>
+            <p class="description">
+                Experiment with chaotic motion in a double pendulum system. Adjust the initial angles of both pendula and their lengths.
+            </p>
+
+            <div class="control-group">
+                <label for="length1">Pendulum 1 Length (m)</label>
+                <input type="range" id="length1" min="0.5" max="3" value="1" step="0.1">
+                <span class="value-display" id="length1Value">1</span>
+            </div>
+
+            <div class="control-group">
+                <label for="length2">Pendulum 2 Length (m)</label>
+                <input type="range" id="length2" min="0.5" max="3" value="1" step="0.1">
+                <span class="value-display" id="length2Value">1</span>
+            </div>
+
+            <div class="control-group">
+                <label for="angle1">Angle 1 (degrees)</label>
+                <input type="range" id="angle1" min="-180" max="180" value="120" step="5">
+                <span class="value-display" id="angle1Value">120</span>
+            </div>
+
+            <div class="control-group">
+                <label for="angle2">Angle 2 (degrees)</label>
+                <input type="range" id="angle2" min="-180" max="180" value="-60" step="5">
+                <span class="value-display" id="angle2Value">-60</span>
+            </div>
+
+            <div class="button-group">
+                <button id="startBtn" class="primary-btn">Start</button>
+                <button id="resetBtn" class="secondary-btn">Reset</button>
+            </div>
+
+            <div class="info-panel">
+                <h3>System State</h3>
+                <div class="info-item">
+                    <span class="info-label">Angle 1:</span>
+                    <span class="info-value" id="displayAngle1">120°</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Angle 2:</span>
+                    <span class="info-value" id="displayAngle2">-60°</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Total Energy:</span>
+                    <span class="info-value" id="totalEnergy">0.00 J</span>
+                </div>
+            </div>
+
+            <div class="toggle-group">
+                <label class="toggle-label">
+                    <input type="checkbox" id="showTrace" checked>
+                    <span>Show Trace</span>
+                </label>
+                <label class="toggle-label">
+                    <input type="checkbox" id="slowMotion">
+                    <span>Slow Motion</span>
+                </label>
+            </div>
+        </aside>
+
+        <section class="canvas-panel">
+            <canvas id="simulationCanvas"></canvas>
+            <div class="canvas-info">
+                <p>Click "Start" to begin the chaotic motion</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../js/double-pendulum.js"></script>
+</body>
+</html>

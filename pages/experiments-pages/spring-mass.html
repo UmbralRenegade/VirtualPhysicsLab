@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring-Mass System - Virtual Physics Lab</title>
+    <link rel="stylesheet" href="../../css/spring-mass.css">
+</head>
+<body>
+    
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#experiments">Experiments</a></li>
+        </ul>
+        <div class="logo"><img src="../../assets/icons/DMaxLogo.png" alt="logo"></div>
+    </nav>
+
+    <main class="experiment-container">
+        <aside class="controls-panel">
+            <h2 class="panel-title">〰️ Spring-Mass System</h2>
+            <p class="description">
+                Explore simple harmonic motion with an oscillating mass-spring system. Adjust the mass, spring constant, and initial displacement.
+            </p>
+
+            <div class="control-group">
+                <label for="mass">Mass (kg)</label>
+                <input type="range" id="mass" min="0.5" max="5" value="1" step="0.1">
+                <span class="value-display" id="massValue">1</span>
+            </div>
+
+            <div class="control-group">
+                <label for="springConstant">Spring Constant (N/m)</label>
+                <input type="range" id="springConstant" min="10" max="100" value="50" step="5">
+                <span class="value-display" id="springConstantValue">50</span>
+            </div>
+
+            <div class="control-group">
+                <label for="displacement">Initial Displacement (m)</label>
+                <input type="range" id="displacement" min="-2" max="2" value="1" step="0.1">
+                <span class="value-display" id="displacementValue">1</span>
+            </div>
+
+            <div class="control-group">
+                <label for="friction">Damping (0 = none)</label>
+                <input type="range" id="friction" min="0" max="0.3" value="0" step="0.01">
+                <span class="value-display" id="frictionValue">0</span>
+            </div>
+
+            <div class="button-group">
+                <button id="startBtn" class="primary-btn">Start</button>
+                <button id="resetBtn" class="secondary-btn">Reset</button>
+            </div>
+
+            <div class="info-panel">
+                <h3>Calculated Values</h3>
+                <div class="info-item">
+                    <span class="info-label">Frequency (Hz):</span>
+                    <span class="info-value" id="frequency">0.00</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Period (s):</span>
+                    <span class="info-value" id="period">0.00</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Current Position:</span>
+                    <span class="info-value" id="currentPosition">0.00 m</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Energy:</span>
+                    <span class="info-value" id="currentEnergy">0.00 J</span>
+                </div>
+            </div>
+
+            <div class="toggle-group">
+                <label class="toggle-label">
+                    <input type="checkbox" id="showPath" checked>
+                    <span>Show Path</span>
+                </label>
+                <label class="toggle-label">
+                    <input type="checkbox" id="showEnergy">
+                    <span>Show Energy Plot</span>
+                </label>
+            </div>
+        </aside>
+
+        <section class="canvas-panel">
+            <canvas id="simulationCanvas"></canvas>
+            <div class="canvas-info">
+                <p>Click "Start" to begin the simulation</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../js/spring-mass.js"></script>
+</body>
+</html>
